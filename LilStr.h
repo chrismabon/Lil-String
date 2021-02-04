@@ -1,5 +1,6 @@
 /**
- * LilStr.cpp
+ * LilStr.h
+ *
  * Copyright (C) 2020 Umbra Aeterna Labs
  * This file is part of Lil String <https://github.com/Umbra-Aeterna-Labs/Lil-String>.
  *
@@ -17,11 +18,39 @@
  * along with Lil String.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "library.h"
+#ifndef LIL_STRING_LILSTR_H
+#define LIL_STRING_LILSTR_H
 
-#include <iostream>
+typedef unsigned short int USI;
 
-void hello()
-{
-    std::cout<<"Hello, World!"<<std::endl;
-}
+class LilStr {
+public:
+    explicit LilStr(char* iArray);
+
+    USI getSize() const;
+    void setSize(USI size);
+    USI getCapac() const;
+    void setCapac(USI capac);
+    char* getStart() const;
+    void setStart(char* start);
+    char* getEnd() const;
+    void setEnd(char* end);
+    bool isEmpty() const;
+    void setEmpty(bool empty);
+    USI getMaxLen() const;
+//    void setMaxLen(USI maxLen);
+
+
+private:
+    char* _arr;
+    USI _size;
+    USI _capac;
+    bool _empty;
+    char* _start;
+    char* _end;
+    USI _maxLen;
+
+    static USI _findSize(const char* iArray);
+};
+
+#endif //LIL_STRING_LILSTR_H
