@@ -1,5 +1,5 @@
 # Lil String
-A very simple string data structure template for C++
+A very simple string data structure for C++
 
 ## Structure
 ```
@@ -12,19 +12,19 @@ Description
 ## Functionality
 ```
 Members
-    - Size (int) - length of the stored string
-    - Capacity (int) - longest string capable of being stored
-    - Start (char ptr) - first character in the string
-    - End (char ptr) - last character in the string
-    - Empty (Boolean) - flag for zero length the string
+    - size (int) - length of the stored string
+    - capacity (int) - longest string capable of being stored
+    - start (char ptr) - first character in the string
+    - end (char ptr) - last character in the string
+    - empty (Boolean) - flag for a zero length string
 Operations
-    - Create (char ptr) - constructs a LilString object from a character array
-    - Get (int) - returns a character at the given index within the string
-    - Append (char) - adds the character to the end of the string
-    - Replace (char, int) - inserts the character at the given index, overwriting previous
-    - Resize (int) - shrinks/grows capacity to given value, min value is size
-    - Print (int) - Outputs data to console, given value determines verbosity level
-    - Clear () - resets the LilString object to a clean state, deleting all data
+    - create (char ptr) - constructs a LilString object from a character array
+    - get (int) - returns a character at the given index within the string
+    - append (char) - adds the character to the end of the string
+    - replace (char, int) - inserts the character at the given index, overwriting previous
+    - resize (int) - shrinks/grows capacity to given value, min value is size
+    - print (int) - outputs data to console, given value determines verbosity level
+    - clear () - resets the LilString object to a clean state, deleting all data
 ```
 
 ## Tools
