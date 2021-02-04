@@ -18,8 +18,8 @@
 ]]
 
 cmake_minimum_required(VERSION 3.17)
-project(lil_string)
+project(lil-string)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_library(lil_string library.cpp library.h)
+add_library(lil-string LilStr.cpp LilStr.h)
