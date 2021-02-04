@@ -1,7 +1,9 @@
 # Lil String
+
 A very simple string data structure for C++
 
 ## Structure
+
 ```
 Description
     - Custom string class geared for performance
@@ -10,6 +12,7 @@ Description
 ```
 
 ## Functionality
+
 ```
 Members
     - size (int) - length of the stored string
@@ -28,12 +31,14 @@ Operations
 ```
 
 ## Tools
+
 * [CLion](https://www.jetbrains.com/clion/documentation/) -  IDE by Jetbrains
 * [CMake](https://cmake.org/documentation/) - C/C++ build manager
 * [GDB](https://www.gnu.org/software/gdb/documentation/) - GNU Project Debugger
 * [GCC](https://gcc.gnu.org/onlinedocs/) - GNU C/C++ compiler
 
 ## License and Copyright
-Lil String is [licensed](LICENSE) under the GNU General Public License v3.0
 
-[Copyright](COPYRIGHT) &copy; 2020 Umbra Aeterna Labs
+This project is licensed under the GNU General Public License v3.0 (GNU GPLv3)
+
+Copyright 2021 Umbra Aeterna Labs <https://github.com/Umbra-Aeterna-Labs>
