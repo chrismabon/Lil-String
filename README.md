@@ -1,6 +1,12 @@
 # Lil String
 
-A very simple string data structure for C++
+(_NOTE_: This project is currently in-progress. Code contained herein is not production-quality
+ and **SHOULD NOT BE USED** in other projects.)
+
+---
+
+A very simple string data structure for C++, intended to be used within more complex data structures
+that require low overhead and good performance from basic string operations.
 
 ## Structure
 
@@ -15,27 +21,25 @@ Description
 
 ```
 Members
-    - size (int) - length of the stored string
-    - capacity (int) - longest string capable of being stored
-    - start (char ptr) - first character in the string
-    - end (char ptr) - last character in the string
-    - empty (Boolean) - flag for a zero length string
+    int length              /// size of occupied portion of string                  
+    int maxLen              /// largest string able to store
+    bool empty              /// flag for empty string (true = empty)
+
 Operations
-    - create (char ptr) - constructs a LilString object from a character array
-    - get (int) - returns a character at the given index within the string
-    - append (char) - adds the character to the end of the string
-    - replace (char, int) - inserts the character at the given index, overwriting previous
-    - resize (int) - shrinks/grows capacity to given value, min value is size
-    - print (int) - outputs data to console, given value determines verbosity level
-    - clear () - resets the LilString object to a clean state, deleting all data
+    getSize ()              /// returns the length of the represented string
+    getCapac ()             /// returns the current string max capacity    
+    getStart ()             /// returns pointer to first character in string   
+    getEnd ()               /// returns pointer to last character in string    
+    isEmpty ()              /// returns true if string size is zero, false otherwise    
+    create (char*)          /// constructs LilString object from character array    
+    get (int)               /// returns character at given index within the string    
+    append (char)           /// adds character to the end of the string    
+    replace (char, int)     /// overwrites character at given index    
+    insert (char, int)      /// inserts character at given index, adding to overall size      
+    resize (int)            /// shrinks/grows capacity to given value, min value is size    
+    print (int)             /// outputs data to console, input determines verbosity level    
+    clear ()                /// reverts LilString object to clean state, deletes all data                
 ```
-
-## Tools
-
-* [CLion](https://www.jetbrains.com/clion/documentation/) -  IDE by Jetbrains
-* [CMake](https://cmake.org/documentation/) - C/C++ build manager
-* [GDB](https://www.gnu.org/software/gdb/documentation/) - GNU Project Debugger
-* [GCC](https://gcc.gnu.org/onlinedocs/) - GNU C/C++ compiler
 
 ## License and Copyright
 
