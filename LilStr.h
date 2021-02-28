@@ -45,7 +45,18 @@ private:
     char* _end;
     USI _maxLen;
 
-    static USI _findSize(const char* iArray);
+    /// Setters for class members
+    void _setSize(usi_kt size);
+    void _setCapac(usi_kt capac);
+    void _setStart(char* start);
+    void _setEnd(char* end);
+    void _setEmpty(bool inEmpty);
+
+    /// counts and returns the size of the input array
+    static usi_kt _findSize(const char* iArray);
+
+    /// refreshes visible string properties with internal values
+    bool _setProps();
 };
 
 #endif //LIL_STRING_LILSTR_H

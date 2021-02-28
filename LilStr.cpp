@@ -18,19 +18,19 @@
 #include <iostream>
 #include "LilStr.h"
 
-USI LilStr::getSize() const {
+usi_kt LilStr::getSize() const {
     return _size;
 }
 
-void LilStr::setSize(USI size) {
+void LilStr::_setSize(usi_kt size) {
     _size = size;
 }
 
-USI LilStr::getCapac() const {
+usi_kt LilStr::getCapac() const {
     return _capac;
 }
 
-void LilStr::setCapac(USI capac) {
+void LilStr::_setCapac(usi_kt capac) {
     _capac = capac;
 }
 
@@ -38,7 +38,7 @@ char* LilStr::getStart() const {
     return _start;
 }
 
-void LilStr::setStart(char* start) {
+void LilStr::_setStart(char* start) {
     _start = start;
 }
 
@@ -46,7 +46,7 @@ char* LilStr::getEnd() const {
     return _end;
 }
 
-void LilStr::setEnd(char* end) {
+void LilStr::_setEnd(char* end) {
     _end = end;
 }
 
@@ -54,8 +54,8 @@ bool LilStr::isEmpty() const {
     return _empty;
 }
 
-void LilStr::setEmpty(bool empty) {
-    _empty = empty;
+void LilStr::_setEmpty(bool inEmpty) {
+    _empty = inEmpty;
 }
 
 USI LilStr::getMaxLen() const {
