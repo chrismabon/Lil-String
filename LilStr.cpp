@@ -58,19 +58,16 @@ void LilStr::_setEmpty(bool inEmpty) {
     _empty = inEmpty;
 }
 
-USI LilStr::getMaxLen() const {
-    return _maxLen;
-}
-
-//void LilStr::setMaxLen(USI maxLen = USHRT_MAX) {
-//    LilStr::_maxLen = maxLen;
-//}
-
-LilStr::LilStr(char* iArray) {
-    USI i = 0;
-    this->setSize(_findSize(iArray));
+LilStr::LilStr(const char* iArray) {
+    this->_size = _findSize(iArray);
+    this->length = this->_size;
+    this->_empty = false;
+    this->empty = this->_empty;
     this->_capac = floor(pow((log(this->_size) / 1.4), 3));
+    this->maxLen = this->_capac;
     this->_arr = new char[(this->_capac)];
+    usi_kt i = 0;
+
     while ((iArray[i] != '\000') && (i < USHRT_MAX)) {
         this->_arr[i] = iArray[i];
         i++;
@@ -79,13 +76,27 @@ LilStr::LilStr(char* iArray) {
     this->_end = &this->_arr[i];
 }
 
-USI LilStr::_findSize(const char* iArray) {
-    USI size = 0;
+usi_kt LilStr::_findSize(const char* iArray) {
+    usi_kt size = 0;
     while ((iArray[size] != '\000') && (size < USHRT_MAX)) {
         size++;
     }
 
     return size;
+}
+
+bool LilStr::_setProps() {
+    bool chgSize = this->_size - this->length;
+    bool chgCapac = this->_capac - this->maxLen;
+    bool chgEmpty = this->_empty ^this->empty;
+
+    bool chgAny = (chgSize || chgCapac) || chgEmpty;
+
+    chgSize ? this->length = this->_size : this->length;
+    chgCapac ? this->maxLen = this->_capac : this->maxLen;
+    chgEmpty ? this->empty = this->_empty : this->empty;
+
+    return chgAny;
 }
 
 
